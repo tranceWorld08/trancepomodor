@@ -1,0 +1,168 @@
+body, html {
+	
+	background-size: cover;
+	height:100%;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	background-image: url(../img/image02.jpg);
+}
+
+#title {
+	padding-top: 20px;
+	text-align: center;
+	font-family:'Notable', sans-serif;
+}
+
+span {
+	font-weight: italic;
+}
+
+#container {
+	position: relative;
+	width: 700px;
+	height: 700px;
+	background-color: rgba(255, 212, 139, 0.7);
+	top: 100px;
+	margin: auto;
+}
+
+#sDisplay {
+	margin: auto;
+	text-align: center;
+}
+
+#linksTitle {
+	left: 295px;
+	top: 75px;
+	position: absolute;
+	text-align: center;
+	color: #b699ff;
+	font-family: 'Notable', sans-serif;
+}
+
+#linkContainer {
+	position:absolute;
+	width:460px;
+	height: 150px;
+	left: 100px;
+	top: 125px;
+	background:#FFFFA5;
+	overflow:hidden;
+	padding:20px;
+}
+
+#note {
+	text-align: center;
+	width: 100%;
+}
+
+#timerSection {
+	width: 500px;
+	border-radius: 5px;
+	background-color: #b699ff;
+	overflow: hidden;
+	position:absolute;
+	margin-top: 10px;
+	left: 100px;
+	top: 350px;
+}
+
+#timer{
+    width: 500px;
+    height: 150px;
+    text-align: center; 
+    margin: 0 auto;
+    font-size: 100px;
+    font-family: cursive, Arial;
+}
+
+#startreset{
+    width:85px;
+	height: 20px;
+    padding: 11px;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: 3px;
+    text-align: center;
+    margin:0 auto 10px auto;		 
+}
+
+.reset_btn {
+	margin: 0 10px 15px 165px;
+	display: inline-block;
+}
+
+#endTimeDiv{
+	z-index: 1;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 75px;
+	left: 100px;
+	font-family: 'Notable', sans-serif;
+	background-color: #ff7a78;
+	text-align: center;
+	line-height: 100px;
+	font-size: 20px;
+	display: none;
+}
+
+#linkRefreshBtn > a, #clearAllBtn > a {
+	text-decoration: none;
+	color: black;
+}
+
+#linkRefreshBtn {
+	position: absolute;
+	width: 80px;
+	left: 265px;
+	top: 620px;
+	text-align: center;
+	border-bottom: 1px solid rgba(200, 70, 240, 0.2);	
+}
+
+#clearAllBtn {
+	color: #ff5043;
+	position: absolute;
+	left: 375px;
+	top: 620px;
+	border-bottom: 1px solid rgba(200, 70, 240, 0.2);
+}
+
+.heart {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: pink;
+  height: 50px;
+  width: 50px;
+  transform: rotate(-45deg); 
+}
+
+.heart::after {
+  background-color: pink;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 25px;
+}
+
+.heart::before {
+  content: "";
+  background-color: pink;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -25px;
+  left: 0px;
+}

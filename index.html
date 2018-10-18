@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<title>Pomodoro Clock</title>
+	<link href="https://fonts.googleapis.com/css?family=Notable" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/main.css">
+
+	<script>
+		function getNote(){
+			if(localStorage.getItem('note')){
+				var note = localStorage.getItem('note');
+			} else {
+				var note = `How to Use...<br>
+				1. Turn off popup blocker(set timer to 3 seconds and when popup blocker triggers, turn it off).<br>
+				2. Set schedule for 1 hour, 2 hours, etc.(for half hour enter '.5').<br>
+				3. Set incremental timer to 10, 15, 20 minutes for short bursts of focused study.<br>
+				4. If no URL is entered, a "random" video will play.<br>
+				5. Erase this text and compile list of your favorite links.`;
+			}
+			
+			document.getElementById('note').innerHTML=note;
+		}
+		
+		function saveNote(id){
+			var note = document.getElementById('note').innerHTML;
+			localStorage.setItem('note', note);
+		}
+		
+		function clearNote(){
+			clear: localStorage.clear();
+			return false;
+		}
+	</script>
+
+</head>
+<body>
+
+	<div id="container">
+		<h2 id="title">Pomodoro Study App</h2>
+
+		<div id="endTimeDiv">
+			<p>your study time has ended</p>
+			<div class="heart"></div>
+
+		</div>
+
+		<div id="sDisplay"></div>
+		
+		<p id="linksTitle">Add Links:</p>
+		
+		<section id="linkContainer">
+			<div id="note" contenteditable="true" onkeyup="saveNote(this.id)">
+			</div>
+		</section>
+		
+		<div id="timerSection">
+			<div id="timer"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></div>
+			<div id="startreset">Start Timer</div>
+			<!-- <div class="btn" id="pause_btn">Pause</div> -->
+		</div>
+
+		<div id="linkRefreshBtn">
+			<a href="" onclick="javascript:clearNote();" class="clear">Clear Links</a>
+		</div>
+		
+		<div id="clearAllBtn">
+			<a href="" id="clearTime">Reset timer</a>
+		</div>
+		
+
+		<!-- <div class="section">
+			<p id="links">Add Links:</p>
+			<textarea cols="40" rows="10"></textarea>
+		</div> -->
+	</div>
+
+	<script>
+		getNote();
+	</script>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
