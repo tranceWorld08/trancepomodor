@@ -196,7 +196,7 @@ function startCountdown(){
                 setTimeout(function() {
                     vid.close();
                     alert("BACK TO WORK!");
-                }, 5000);
+                }, sevenMin);
 			} else {
 				document.getElementById("startreset").innerHTML = "Start Timer";
 				
