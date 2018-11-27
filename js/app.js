@@ -13,15 +13,15 @@ var scheduleTimeInput;
 var scheduleTime;
 var scheduleTimeDisplay;
 var timeRem;
-
 let sevenMin = 420000;
+let strWindowFeatures = "menubar=yes, location=yes, resizable=yes, scrollbars=yes, status=yes";
 
 var urls = {
 	1:"https://www.youtube.com/watch?v=Z9CstDydhiM",
 	2:"https://www.youtube.com/watch?v=EYtVWLm0om8",
 	3:"https://www.youtube.com/watch?v=iiMurowoaxY",
 	4:"https://www.youtube.com/watch?v=m9Im0h5FNR4",
-	5:"https://www.youtube.com/watch?v=DhrC_3cMvZ8",
+	5:"https://www.youtube.com/watch?v=0svSyjHOyFY",
 	6:"https://www.youtube.com/watch?v=tFhefdKkfKg",
 	7:"https://www.youtube.com/watch?v=yj7VnhE0wjQ",
 	8:"https://www.youtube.com/watch?v=Tp_WgYLTgFQ",
@@ -185,7 +185,7 @@ function startCountdown(){
 		} else if(hours === 0 && minutes === 0 && seconds === 0){
 			stopCountdown();
 			// var songURL = generateRandomURL();
-			var strWindowFeatures = "menubar=yes, location=yes, resizable=yes, scrollbars=yes, status=yes";
+			
             let vid = window.open(videoLink, "YOUTUBE_WindowName", strWindowFeatures);
             
 			isCounting = false;
@@ -196,9 +196,10 @@ function startCountdown(){
                 setTimeout(function() {
                     vid.close();
                     alert("BACK TO WORK!");
-                }, 3000);
+                }, 5000);
 			} else {
-                document.getElementById("startreset").innerHTML = "Start Timer";
+				document.getElementById("startreset").innerHTML = "Start Timer";
+				
                 show('endTimeDiv');
 			}
 		} else {
@@ -217,6 +218,8 @@ function startTimeRemainingCountdown(){
 	
 	if(scheduleTime === 0){
 		stopCountdown();
+		window.open(videoLink, "YOUTUBE_WindowName", strWindowFeatures);
+        show('endTimeDiv');
 	}
 }
 

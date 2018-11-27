@@ -95,15 +95,15 @@ span {
 	display: inline-block;
 }
 
-#endTimeDiv{
+#endTimeDiv {
 	z-index: 1;
 	width: 500px;
-	height: 500px;
+	height: 310px;
 	position: absolute;
 	top: 75px;
 	left: 100px;
 	font-family: 'Notable', sans-serif;
-	background-color: #ff7a78;
+	background-color: rgba(255, 122, 120, 0.9);
 	text-align: center;
 	line-height: 100px;
 	font-size: 20px;
@@ -135,7 +135,7 @@ span {
 .heart {
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 50px;
   right: 0;
   bottom: 0;
   left: 0;
