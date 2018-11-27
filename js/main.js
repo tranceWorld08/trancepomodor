@@ -14,6 +14,8 @@ var scheduleTime;
 var scheduleTimeDisplay;
 var timeRem;
 
+let sevenMin = 420000;
+
 var urls = {
 	1:"https://www.youtube.com/watch?v=Z9CstDydhiM",
 	2:"https://www.youtube.com/watch?v=EYtVWLm0om8",
@@ -184,15 +186,20 @@ function startCountdown(){
 			stopCountdown();
 			// var songURL = generateRandomURL();
 			var strWindowFeatures = "menubar=yes, location=yes, resizable=yes, scrollbars=yes, status=yes";
-
-			window.open(videoLink, "YOUTUBE_WindowName", strWindowFeatures);
-			
+            let vid = window.open(videoLink, "YOUTUBE_WindowName", strWindowFeatures);
+            
 			isCounting = false;
 
 			if(scheduleTime > 0){
-				document.getElementById("startreset").innerHTML = "Continue";
+                document.getElementById("startreset").innerHTML = "Continue";
+
+                setTimeout(function() {
+                    vid.close();
+                    alert("BACK TO WORK!");
+                }, 3000);
 			} else {
-				document.getElementById("startreset").innerHTML = "Start Timer";
+                document.getElementById("startreset").innerHTML = "Start Timer";
+                show('endTimeDiv');
 			}
 		} else {
 			isCounting = isCounting;
@@ -210,7 +217,6 @@ function startTimeRemainingCountdown(){
 	
 	if(scheduleTime === 0){
 		stopCountdown();
-		show('endTimeDiv');
 	}
 }
 
