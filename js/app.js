@@ -6,6 +6,7 @@ var minutes = 0;
 var seconds = 0;
 var action;
 var videoLink;
+let lastLink = '';
 var hoursDisplay = document.getElementById("hours");
 var minutesDisplay = document.getElementById("minutes");
 var secondsDisplay = document.getElementById("seconds");
@@ -134,7 +135,11 @@ document.getElementById("startreset").onclick = function() {
 			seconds = Number.parseInt(timeVal);
 		}
 
-		videoLink = prompt("Enter URL(enter through if no URL is desired)") || generateRandomURL();
+		if(typeof videoLink !== 'undefined') {
+			lastLink = videoLink;
+		}
+
+		videoLink = prompt("Enter URL(enter through if no URL is desired)", lastLink) ||  generateRandomURL();
 
 		document.getElementById("startreset").innerHTML = "Pause";
 		
