@@ -228,7 +228,7 @@ function startTimeRemainingCountdown(){
 	
 	if( displayedHour > 0) {
 		if(displayedHour == 1) {
-			timeRem.innerHTML =`Time remaining: ${displayedHour} hour, ${displayedMinute} minutes`;
+			timeRem.innerHTML =`Time remaining: ${displayedHour} hour ${displayedMinute} minutes`;
 		} else {
 			timeRem.innerHTML =`Time remaining: ${displayedHour} hour(s) ${displayedMinute} minutes`;
 		}
