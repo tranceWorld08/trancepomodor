@@ -215,11 +215,27 @@ function startCountdown(){
 }
 
 function startTimeRemainingCountdown(){
+	let displayedHour = Math.trunc((scheduleTime / 60) / 60);
+	let displayedMinute = Math.trunc(((scheduleTime / 60) / 60 - displayedHour) * 60);
 	scheduleTime--;
 
-	scheduleTimeDisplay.innerHTML =`Study schedule has been set for ${scheduleTimeInput} hour(s)`;
+	if(scheduleTimeInput > 1) {
+		scheduleTimeDisplay.innerHTML =`Study schedule has been set for ${scheduleTimeInput} hours`;
+	} else {
+		scheduleTimeDisplay.innerHTML =`Study schedule has been set for ${scheduleTimeInput} hour`;
+	}
 	
-	timeRem.innerHTML =`Time remaining: ${scheduleTime} secs`;
+	
+	if( displayedHour > 0) {
+		if(displayedHour == 1) {
+			timeRem.innerHTML =`Time remaining: ${displayedHour} hour, ${displayedMinute} minutes`;
+		} else {
+			timeRem.innerHTML =`Time remaining: ${displayedHour} hour(s) ${displayedMinute} minutes`;
+		}
+	} else {
+		timeRem.innerHTML =`Time remaining: ${displayedMinute} minutes`;
+	}
+	
 	
 	if(scheduleTime === 0){
 		stopCountdown();
