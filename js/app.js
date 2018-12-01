@@ -70,7 +70,7 @@ document.getElementById("startreset").onclick = function() {
 				scheduleTimeInput = Math.abs(prompt("Enter total study time in hours", 0));
 				scheduleTime = (scheduleTimeInput !== 0) ? ((scheduleTimeInput * 60) * 60) : 0;
 
-				if(scheduleTimeInput != 0) {
+				if(isSettingSchedule && scheduleTimeInput != 0) {
 
 					scheduleTimeDisplay = document.createElement('h2');
 					scheduleTimeDisplay.style = "padding-top: 10px";
