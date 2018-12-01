@@ -70,22 +70,6 @@ document.getElementById("startreset").onclick = function() {
 				scheduleTimeInput = Math.abs(prompt("Enter total study time in hours", 0));
 				scheduleTime = (scheduleTimeInput !== 0) ? ((scheduleTimeInput * 60) * 60) : 0;
 			}
-			
-				if(isSettingSchedule && scheduleTimeInput != 0){
-
-					scheduleTimeDisplay = document.createElement('h2');
-					scheduleTimeDisplay.style = "padding-top: 10px";
-					document.getElementById("sDisplay").appendChild(scheduleTimeDisplay);
-
-					timeRem = document.createElement('p');
-					document.getElementById("sDisplay").appendChild(timeRem);
-
-					document.getElementById("linksTitle").style.top = "150px";
-					document.getElementById("linkContainer").style.top = "200px";
-					document.getElementById("timerSection").style.top = "400px";
-					document.getElementById("linkRefreshBtn").style.top = "650px";
-					document.getElementById("clearAllBtn").style.top = "650px";
-				}
 
 		}
 			
@@ -105,6 +89,25 @@ document.getElementById("startreset").onclick = function() {
 			}
 			
 		} while(timeVal < 1);
+
+		if(timeVal) {
+
+			if(scheduleTimeInput != 0) {
+
+				scheduleTimeDisplay = document.createElement('h2');
+				scheduleTimeDisplay.style = "padding-top: 10px";
+				document.getElementById("sDisplay").appendChild(scheduleTimeDisplay);
+
+				timeRem = document.createElement('p');
+				document.getElementById("sDisplay").appendChild(timeRem);
+
+				document.getElementById("linksTitle").style.top = "150px";
+				document.getElementById("linkContainer").style.top = "200px";
+				document.getElementById("timerSection").style.top = "400px";
+				document.getElementById("linkRefreshBtn").style.top = "650px";
+				document.getElementById("clearAllBtn").style.top = "650px";
+			}
+		}
 		
 		timeVal = timeVal.toString();
 		if(timeVal.length > 4){
@@ -230,7 +233,7 @@ function startTimeRemainingCountdown(){
 		if(displayedHour == 1) {
 			timeRem.innerHTML =`Time remaining: ${displayedHour} hour ${displayedMinute} minutes`;
 		} else {
-			timeRem.innerHTML =`Time remaining: ${displayedHour} hour(s) ${displayedMinute} minutes`;
+			timeRem.innerHTML =`Time remaining: ${displayedHour} hours ${displayedMinute} minutes`;
 		}
 	} else {
 		timeRem.innerHTML =`Time remaining: ${displayedMinute} minutes`;
