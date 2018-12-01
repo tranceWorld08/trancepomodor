@@ -69,6 +69,22 @@ document.getElementById("startreset").onclick = function() {
 				isSettingSchedule = confirm("First, set schedule");
 				scheduleTimeInput = Math.abs(prompt("Enter total study time in hours", 0));
 				scheduleTime = (scheduleTimeInput !== 0) ? ((scheduleTimeInput * 60) * 60) : 0;
+
+				if(scheduleTimeInput != 0) {
+
+					scheduleTimeDisplay = document.createElement('h2');
+					scheduleTimeDisplay.style = "padding-top: 10px";
+					document.getElementById("sDisplay").appendChild(scheduleTimeDisplay);
+	
+					timeRem = document.createElement('p');
+					document.getElementById("sDisplay").appendChild(timeRem);
+	
+					document.getElementById("linksTitle").style.top = "150px";
+					document.getElementById("linkContainer").style.top = "200px";
+					document.getElementById("timerSection").style.top = "400px";
+					document.getElementById("linkRefreshBtn").style.top = "650px";
+					document.getElementById("clearAllBtn").style.top = "650px";
+				}
 			}
 
 		}
@@ -79,6 +95,7 @@ document.getElementById("startreset").onclick = function() {
 			timeVal = prompt("Enter incremental time in 'mm:ss' format", time);
 			if(timeVal == null){
 				alert("You didn't enter a time.");
+				location.reload();
 				return;
 			} else {
 				var re = /\:/g;
@@ -89,25 +106,6 @@ document.getElementById("startreset").onclick = function() {
 			}
 			
 		} while(timeVal < 1);
-
-		if(timeVal) {
-
-			if(scheduleTimeInput != 0) {
-
-				scheduleTimeDisplay = document.createElement('h2');
-				scheduleTimeDisplay.style = "padding-top: 10px";
-				document.getElementById("sDisplay").appendChild(scheduleTimeDisplay);
-
-				timeRem = document.createElement('p');
-				document.getElementById("sDisplay").appendChild(timeRem);
-
-				document.getElementById("linksTitle").style.top = "150px";
-				document.getElementById("linkContainer").style.top = "200px";
-				document.getElementById("timerSection").style.top = "400px";
-				document.getElementById("linkRefreshBtn").style.top = "650px";
-				document.getElementById("clearAllBtn").style.top = "650px";
-			}
-		}
 		
 		timeVal = timeVal.toString();
 		if(timeVal.length > 4){
