@@ -234,8 +234,14 @@ function startTimeRemainingCountdown(){
 		} else {
 			timeRem.innerHTML =`Time remaining: ${displayedHour} hours ${displayedMinute} minutes`;
 		}
+	} else if(displayedMinute > 0) {
+		if(displayedMinute == 1){
+			timeRem.innerHTML =`Time remaining: ${displayedMinute} minute`;
+		} else {
+			timeRem.innerHTML =`Time remaining: ${displayedMinute} minutes`;
+		}
 	} else {
-		timeRem.innerHTML =`Time remaining: ${displayedMinute} minutes`;
+		timeRem.innerHTML =`Time remaining: ${scheduleTime} seconds`;
 	}
 	
 	

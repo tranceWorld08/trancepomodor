@@ -98,9 +98,9 @@ span {
 #endTimeDiv {
 	z-index: 1;
 	width: 500px;
-	height: 500px;
+	height: 521px;
 	position: absolute;
-	top: 75px;
+	top: 90px;
 	left: 100px;
 	font-family: 'Notable', sans-serif;
 	background-color: rgba(255, 122, 120, 0.97);
