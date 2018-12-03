@@ -7,6 +7,8 @@ var seconds = 0;
 var action;
 var videoLink;
 let lastLink = '';
+let timeVal;
+let lastTime;
 var hoursDisplay = document.getElementById("hours");
 var minutesDisplay = document.getElementById("minutes");
 var secondsDisplay = document.getElementById("seconds");
@@ -59,7 +61,6 @@ document.getElementById("startreset").onclick = function() {
 		// }
 		
 	} else {
-		var timeVal;
 
 		if (scheduleTime > 0) {
 			scheduleTime = scheduleTime;
@@ -91,8 +92,10 @@ document.getElementById("startreset").onclick = function() {
 			
 
 		do{
-			let time = '15:00';
-			timeVal = prompt("Enter incremental time in 'mm:ss' format", time);
+
+			lastTime = (timeVal) ? timeVal : 0;
+
+			timeVal = prompt("Enter incremental time in 'mm:ss' format", lastTime);
 			if(timeVal == null){
 				alert("You didn't enter a time.");
 				location.reload();
@@ -136,9 +139,7 @@ document.getElementById("startreset").onclick = function() {
 			seconds = Number.parseInt(timeVal);
 		}
 
-		if(typeof videoLink !== 'undefined') {
-			lastLink = videoLink;
-		}
+		lastLink = videoLink ? videoLink : '';
 
 		videoLink = prompt("Enter URL(enter through if no URL is desired)", lastLink) ||  generateRandomURL();
 
