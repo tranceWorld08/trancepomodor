@@ -91,7 +91,7 @@ document.getElementById("startreset").onclick = function() {
 			
 
 		do{
-			let time = '20:00';
+			let time = '15:00';
 			timeVal = prompt("Enter incremental time in 'mm:ss' format", time);
 			if(timeVal == null){
 				alert("You didn't enter a time.");
