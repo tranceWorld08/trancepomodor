@@ -95,19 +95,24 @@ span {
 	display: inline-block;
 }
 
-#endTimeDiv{
+#endTimeDiv {
 	z-index: 1;
 	width: 500px;
-	height: 500px;
+	height: 521px;
 	position: absolute;
-	top: 75px;
+	top: 90px;
 	left: 100px;
 	font-family: 'Notable', sans-serif;
-	background-color: #ff7a78;
+	background-color: rgba(255, 122, 120, 0.97);
 	text-align: center;
-	line-height: 100px;
+	line-height: 40px;
 	font-size: 20px;
 	display: none;
+}
+
+hr {
+	width: 100px;
+	text-align: center;
 }
 
 #linkRefreshBtn > a, #clearAllBtn > a {
@@ -135,7 +140,7 @@ span {
 .heart {
   position: absolute;
   margin: auto;
-  top: 0;
+  top: 250px;
   right: 0;
   bottom: 0;
   left: 0;
