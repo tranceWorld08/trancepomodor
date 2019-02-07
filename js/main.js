@@ -18,21 +18,29 @@ var urls = {
 	1:"https://www.youtube.com/watch?v=Z9CstDydhiM",
 	2:"https://www.youtube.com/watch?v=EYtVWLm0om8",
 	3:"https://www.youtube.com/watch?v=iiMurowoaxY",
-	4:"https://www.youtube.com/watch?v=m9Im0h5FNR4",
-	5:"https://www.youtube.com/watch?v=DhrC_3cMvZ8",
+	4:"https://www.youtube.com/watch?v=91HpJWNTYHo",
+	5:"https://www.youtube.com/watch?v=7ofh-h8c9VI",
 	6:"https://www.youtube.com/watch?v=tFhefdKkfKg",
 	7:"https://www.youtube.com/watch?v=yj7VnhE0wjQ",
 	8:"https://www.youtube.com/watch?v=Tp_WgYLTgFQ",
-	9:"https://www.youtube.com/watch?v=887lax8LDDg",
+	9:"https://www.youtube.com/watch?v=dLLjKOdhTaI",
 	10:"https://www.youtube.com/watch?v=_8WSncYS0U0",
-	11:"https://www.youtube.com/watch?v=MWDbYS_t3rE",
-	12:"https://www.youtube.com/watch?v=FGGaU-iT0Tc",
-	13:"https://www.youtube.com/watch?v=TdilRwHQMlQ",
-	14:"https://www.youtube.com/watch?v=GP60Ygot8Mk",
-	15:"https://www.youtube.com/watch?v=anzIMcsHyDw",
-	16:"https://www.youtube.com/watch?v=zCLAxVXaMIc",
-	17:"https://www.youtube.com/watch?v=IYhxDGls63E",
-	18:"https://www.youtube.com/watch?v=abWLZDTCvjM"
+	11:"https://www.youtube.com/watch?v=qx_tz7USwyE",
+	12:"https://www.youtube.com/watch?v=MWDbYS_t3rE",
+	13:"https://www.youtube.com/watch?v=np9bzMvFxIE",
+	14:"https://www.youtube.com/watch?v=FGGaU-iT0Tc",
+	15:"https://www.youtube.com/watch?v=my6bfA14vMQ",
+	16:"https://www.youtube.com/watch?v=TdilRwHQMlQ",
+	17:"https://www.youtube.com/watch?v=hIifpraY5Oo",
+	18:"https://www.youtube.com/watch?v=GP60Ygot8Mk",
+	19:"https://www.youtube.com/watch?v=SXhxEx7f7AI",
+	20:"https://www.youtube.com/watch?v=anzIMcsHyDw",
+	21:"https://www.youtube.com/watch?v=SNCpo7pSF7s",
+	22:"https://www.youtube.com/watch?v=zCLAxVXaMIc",
+	23:"https://www.youtube.com/watch?v=L888I03ZPHM",
+	24:"https://www.youtube.com/watch?v=IYhxDGls63E",
+	25:"https://www.youtube.com/watch?v=abWLZDTCvjM",
+	26:"https://www.youtube.com/watch?v=B4vTwppAfDg"
 };
 
 document.getElementById("startreset").onclick = function() {
@@ -233,6 +241,6 @@ function toggleClass(id, cls){
 //KEEP FOR RANDOM SONG GENERATION
 
 function generateRandomURL(){
-	var randomNum = Math.round(Math.random() * 17) + 1;
+	var randomNum = Math.round(Math.random() * 25) + 1;
 	return urls[randomNum];
 }
