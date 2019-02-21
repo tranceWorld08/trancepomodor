@@ -76,7 +76,7 @@ document.getElementById("startreset").onclick = function() {
 		} else {
 			if(!scheduleTime){
 				isSettingSchedule = confirm("First, set schedule");
-				scheduleTimeInput = Math.abs(prompt("Enter total study time in hours", 0));
+				scheduleTimeInput = Math.abs(prompt("Enter total study time in hours(type only the number of hours)", 0));
 				scheduleTime = (scheduleTimeInput !== 0) ? ((scheduleTimeInput * 60) * 60) : 0;
 
 				if(isSettingSchedule && scheduleTimeInput != 0) {
